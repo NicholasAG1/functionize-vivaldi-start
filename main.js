@@ -1,13 +1,35 @@
 // Vivald JS Example
 
 // When a Season Button is Clicked
-document.getElementById('summerBtn').addEventListener('click', setSummer);
-document.getElementById('autumnBtn').addEventListener('click', setAutumn);
-document.getElementById('winterBtn').addEventListener('click', setWinter);
-document.getElementById('springBtn').addEventListener('click', setSpring);
+document.getElementById('summerBtn').addEventListener('click', seasonSelect);
+document.getElementById('autumnBtn').addEventListener('click', seasonSelect);
+document.getElementById('winterBtn').addEventListener('click', seasonSelect);
+document.getElementById('springBtn').addEventListener('click', seasonSelect); 
 
+// test button
+function seasonSelect(){
+    if (document.getElementById('summerBtn').addEventListener('click')) {
+        name = Summer
+    }
+
+}
 
 // Event Functions
+function setSeason(name) {
+    // - change concerto text
+    document.getElementById('season-text').innerHTML = name;
+    
+    // - change main image
+    document.getElementById('main-img').src = 'images/' + name.tolowercase() + '.jpg';
+     
+    // - change page background color
+    document.body.style.backgroundColor = '#1BA848';
+     
+    // - change audio source
+    document.getElementById('song').src = 'songs/vivaldi-' + name.tolowercase() + '.mp3';
+     
+}
+
 function setSummer() {
     // - change concerto text
     document.getElementById('season-text').innerHTML = 'summer';
