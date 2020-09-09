@@ -8,9 +8,6 @@ document.getElementById('springBtn').addEventListener('click', seasonSelect);
 
 // test button
 function seasonSelect(){
-    if (document.getElementById('summerBtn').addEventListener('click')) {
-        name = Summer
-    }
 
 }
 
